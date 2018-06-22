@@ -1,8 +1,11 @@
+
 html, body {
   margin: 0;
   padding: 0;
   font-size: 100%;
   line-height: 1.5;
+  position: relative;
+
 }
 body {
   width: 100%;
@@ -16,13 +19,50 @@ body {
   width: 90%;
   margin: 0 auto;
   text-align: center;
+  min-height: calc(100vh - 50px);
+
+
 }
+
 .quote {
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 2.5rem; 
+  font-size: .5rem; 
 }
 .author {
   font-family: 'Crimson Text', serif;
-  font-size: 1.5rem;
+  font-size: .4rem;
   font-style: italic;
+}
+
+.footer {
+
+  position: -50px;
+  height: 50px;
+}
+
+@media (min-width: 300px) {
+    .quote {
+      font-size: 1.5rem;
+    }
+    .author{
+      font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 780px) {
+    .quote {
+      font-size: 2.5rem;
+    }
+    .author{
+      font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .quote {
+      font-size: 3.5rem;
+    }
+    .author{
+      font-size: 3.3rem;
+    }
 }
