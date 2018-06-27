@@ -1,27 +1,36 @@
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  line-height: 1.5;
+* {
+  box-sizing: border-box;
+}
+html { /*Az egész html-t használjuk konténerként*/
+  min-height: 100%;
   position: relative;
-
 }
 body {
-  width: 100%;
-  height: 100vh;
+  margin-bottom: 50px;
   background: url('assets/freedom.jpg') no-repeat center;
-  background-size: cover;
-  color: #333;
 }
+
+footer {
+  display: table; /*középre igazítás-1  táblázat*/
+  width: 100vw; /*középre igazítás-2  teljes szélesség*/
+  height: 8rem; /*magasság méret rem:relatív az alaphoz képest*/
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+  font-size: .875rem;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+}
+
 .wrapper {
+/*  display: table-cell; /*középre igazítás-3 egy cella legyen*/*/
+  vertical-align: middle;  /*középre igazítás-4  melyet függőlegesen középre*/
   padding-top: 4rem;
   width: 90%;
   margin: 0 auto;
   text-align: center;
-  min-height: calc(100vh - 50px);
-
-
 }
 
 .quote {
@@ -34,12 +43,7 @@ body {
   font-style: italic;
 }
 
-.footer {
-
-  position: -50px;
-  height: 50px;
-}
-
+/* képernyőméretekhez betüméret*/
 @media (min-width: 300px) {
     .quote {
       font-size: 1.5rem;
